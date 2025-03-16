@@ -15,17 +15,18 @@ import { NewsItem } from "@/components/news/NewsCard";
 import NewsCard from "@/components/news/NewsCard";
 import { FiClock, FiShare2, FiFacebook, FiTwitter, FiLinkedin } from "react-icons/fi";
 
-type NewsDetailParams = {
+type Props = {
   params: {
     category: string;
     slug: string;
   };
+  searchParams: Record<string, string | string[] | undefined>;
 };
 
 // 生成動態元數據
-export async function generateMetadata({ params }: NewsDetailParams): Promise<Metadata> {
-  const category = params?.category;
-  const slug = params?.slug;
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const category = params.category;
+  const slug = params.slug;
   
   // 從所有新聞中找到對應的新聞
   const allNews = [
@@ -55,9 +56,9 @@ export async function generateMetadata({ params }: NewsDetailParams): Promise<Me
   };
 }
 
-export default async function NewsDetailPage({ params }: NewsDetailParams) {
-  const category = params?.category;
-  const slug = params?.slug;
+export default function NewsDetailPage({ params }: Props) {
+  const category = params.category;
+  const slug = params.slug;
   
   // 從所有新聞中找到對應的新聞
   const allNews = [

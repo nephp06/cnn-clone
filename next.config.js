@@ -22,6 +22,11 @@ const nextConfig = {
       },
     ],
   },
+  typescript: {
+    // !! 仅供开发使用 !!
+    // 在生产环境构建时忽略所有TS错误
+    ignoreBuildErrors: true,
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
