@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="40" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .text { fill: #0066CC; font-family: Arial, sans-serif; font-weight: bold; }
+    .box { fill: #0066CC; }
+  </style>
+  <rect class="box" x="0" y="8" width="12" height="24" rx="2" />
+  <text class="text" x="18" y="30" font-size="30">BNN</text>
+</svg> 
